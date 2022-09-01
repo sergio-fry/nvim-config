@@ -3,6 +3,7 @@
 
 
 call plug#begin()
+Plug 'godlygeek/tabular'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -11,16 +12,17 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'janko-m/vim-test'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/gv.vim'
 Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'plasticboy/vim-markdown'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/nvim-lsp-installer'
-
-Plug 'tpope/vim-commentary'
-
 call plug#end()
 
 colorscheme gruvbox
@@ -83,3 +85,14 @@ nmap <Space>nn :NERDTreeClose<CR>
 
 " What plugin?
 :command A :call OpenAlternate(expand('%'), ':e')
+
+
+"Save file after focus lost
+:au FocusLost * :wa
+:au BufLeave * :wa
+
+" http://vim.wikia.com/wiki/Using_the_mouse_for_Vim_in_an_xterm
+set mouse=a
+
+
+set keymap=russian-jcukenmac
