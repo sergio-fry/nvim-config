@@ -1,40 +1,18 @@
 " :LspInstall ruby
 
+source ~/.config/nvim/plugins.vim
 
-call plug#begin()
-Plug 'janko-m/vim-test'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/gv.vim'
-Plug 'morhetz/gruvbox'
-Plug 'neovim/nvim-lspconfig'
-Plug 'plasticboy/vim-markdown'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-call plug#end()
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme twilight256
 
 
 lua <<EOF
 EOF
 
 
-:nmap <C-p> :FZF<CR>
-:nmap <Space>ff :FZF<CR>
 
-
-nmap <Space>t :TestLast<CR>
-nmap <Space>tt :TestLast<CR>
-nmap <Space>tn :TestNearest<CR>
-nmap <Space>tf :TestFile<CR>
-nmap <Space>ts :TestSuite<CR>
-nmap <Space>b :BufExplorer<CR>
-nmap <Space>bb :Buffers<CR>
-nmap <Space>ft :NERDTreeFind<CR>
-
-
+" https://github.com/uptech/alt
 " Run a given vim command on the results of alt from a given path.
 " See usage below.
 function! OpenAlternate(path, vim_command)
@@ -46,7 +24,6 @@ function! OpenAlternate(path, vim_command)
   endif
 endfunction
 
-:command A :call OpenAlternate(expand('%'), ':e')
 
 
 "Save file after focus lost
@@ -59,7 +36,10 @@ set mouse=a
 
 " set keymap=russian-jcukenmac
 
-
 let g:vim_markdown_folding_disabled = 1
 
 set number
+set exrc " exec local .exrc to load project-specific configs
+
+source ~/.config/nvim/lsp.lua
+source ~/.config/nvim/shortcuts.vim

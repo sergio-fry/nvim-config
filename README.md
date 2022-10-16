@@ -1,7 +1,11 @@
 # nvim-config
 Ny NeoVIM configs
 
-* Tree Sitter
-* LSP Ruby
-* Run Tests
-* Fuzzy Finder
+
+[x] LSP Ruby
+[ ] snippets
+[x] local project config
+[ ] split config into parts
+[ ] Tree Sitter
+[ ] telescope
+[ ] search
