@@ -41,6 +41,10 @@ let g:vim_markdown_folding_disabled = 1
 set number
 set exrc " exec local .exrc to load project-specific configs
 
+" workaround to fix menu bug:
+" https://github.com/preservim/nerdtree/issues/1321
+let g:NERDTreeMinimalMenu=1
+
 source ~/.config/nvim/lsp.lua
 source ~/.config/nvim/shortcuts.vim
 source ~/.config/nvim/snippets.vim
