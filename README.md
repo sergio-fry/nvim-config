@@ -2,10 +2,9 @@
 Ny NeoVIM configs
 
 
-[x] LSP Ruby
-[ ] snippets
-[x] local project config
-[ ] split config into parts
-[ ] Tree Sitter
-[ ] telescope
-[ ] search
+[X] LSP Ruby
+[X] snippets
+[X] local project config
+[X] split config into parts
+[X] telescope
+[X] search

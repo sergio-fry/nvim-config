@@ -1,14 +1,13 @@
-:nmap <C-p> :FZF<CR>
-:nmap <Space>ff :FZF<CR>
+nmap <C-p> :Telescope find_files<CR>
 
-
-nmap <Space>t :TestLast<CR>
-nmap <Space>tt :TestLast<CR>
-nmap <Space>tn :TestNearest<CR>
-nmap <Space>tf :TestFile<CR>
-nmap <Space>ts :TestSuite<CR>
-nmap <Space>b :BufExplorer<CR>
-nmap <Space>bb :Buffers<CR>
+nmap <Space>b :Telescope buffers<CR>
+nmap <Space>ff :Telescope find_files<CR>
+nmap <Space>fs :Telescope live_grep<CR>
 nmap <Space>ft :NERDTreeFind<CR>
+nmap <Space>t :TestLast<CR>
+nmap <Space>tf :TestFile<CR>
+nmap <Space>tl :TestNearest<CR>
+nmap <Space>ts :TestSuite<CR>
+nmap <Space>tt :TestLast<CR>
 
 :command A :call OpenAlternate(expand('%'), ':e')

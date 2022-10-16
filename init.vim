@@ -1,10 +1,10 @@
-" :LspInstall ruby
 
 source ~/.config/nvim/plugins.vim
 
 
 "colorscheme gruvbox
 colorscheme twilight256
+"colorscheme off
 
 
 lua <<EOF
@@ -43,3 +43,4 @@ set exrc " exec local .exrc to load project-specific configs
 
 source ~/.config/nvim/lsp.lua
 source ~/.config/nvim/shortcuts.vim
+source ~/.config/nvim/snippets.vim
