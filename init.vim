@@ -1,5 +1,4 @@
-
-source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/plugins.lua
 
 
 "colorscheme gruvbox
