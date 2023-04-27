@@ -1,8 +1,9 @@
 source ~/.config/nvim/plugins.lua
 
 
-"colorscheme gruvbox
-colorscheme twilight256
+colorscheme gruvbox
+"colorscheme twilight256
+"colorscheme solarized
 "colorscheme off
 
 

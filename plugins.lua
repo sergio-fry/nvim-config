@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+		'nvim-treesitter/nvim-treesitter',
 		'janko-m/vim-test',
 		'junegunn/gv.vim',
 		'morhetz/gruvbox',
@@ -20,8 +21,13 @@ require("lazy").setup({
 		'tpope/vim-fugitive',
 
 		-- Telescope
-		'nvim-lua/plenary.nvim',
-		'nvim-telescope/telescope.nvim',
+		{
+			'nvim-telescope/telescope.nvim', tag = '0.1.1',
+			dependencies = {
+				'nvim-lua/plenary.nvim',
+				'BurntSushi/ripgrep'
+			}
+		},
 
 		-- Lang Support
 		'vim-ruby/vim-ruby' ,
@@ -38,6 +44,5 @@ require("lazy").setup({
 		'dcampos/nvim-snippy',
 		'dcampos/cmp-snippy', -- snippets engine
 		'honza/vim-snippets', -- snippets collection
-
 	})
 
