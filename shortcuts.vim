@@ -1,6 +1,7 @@
 nmap <C-p> :Telescope find_files<CR>
 
-nmap <Space>b :Telescope buffers<CR>
+nmap <Space>fb :Telescope buffers<CR>
+nmap <Space>b :BufExplorer<CR>
 nmap <Space>ff :Telescope find_files<CR>
 nmap <Space>fs :Telescope live_grep<CR>
 nmap <Space>ft :NERDTreeFind<CR>

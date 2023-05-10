@@ -1,10 +1,15 @@
 # nvim-config
 Ny NeoVIM configs
 
+## Features
 
-[X] LSP Ruby
-[X] snippets
-[X] local project config
-[X] split config into parts
-[X] telescope
-[X] search
+* LSP Ruby
+* snippets
+* local project config
+* split config into parts
+* telescope
+* search
+
+## Installation
+
+* `brew install uptech/oss/alt`

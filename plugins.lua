@@ -18,7 +18,13 @@ require("lazy").setup({
 		'morhetz/gruvbox',
 		'scrooloose/nerdtree',
 		'tpope/vim-commentary',
+
+		-- buffers
+		'jlanzarotta/bufexplorer',
+
+		-- Git
 		'tpope/vim-fugitive',
+		--'Morozzzko/git_browse.nvim',
 
 		-- Telescope
 		{
