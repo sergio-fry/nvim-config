@@ -13,3 +13,7 @@ Ny NeoVIM configs
 ## Installation
 
 * `brew install uptech/oss/alt`
+
+## TODO
+
+[ ] https://github.com/hrsh7th/nvim-cmp
