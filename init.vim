@@ -36,8 +36,6 @@ set mouse=a
 
 " set keymap=russian-jcukenmac
 
-let g:vim_markdown_folding_disabled = 1
-
 set number
 set exrc " exec local .exrc to load project-specific configs
 
