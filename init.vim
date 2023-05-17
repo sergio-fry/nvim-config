@@ -36,7 +36,9 @@ set mouse=a
 
 " set keymap=russian-jcukenmac
 
-set number
+let g:vim_markdown_folding_disabled = 1
+
+"set number
 set exrc " exec local .exrc to load project-specific configs
 
 " workaround to fix menu bug:
