@@ -17,3 +17,4 @@ Ny NeoVIM configs
 ## TODO
 
 [ ] https://github.com/hrsh7th/nvim-cmp
+[ ] https://github.com/olimorris/neotest-rspec
