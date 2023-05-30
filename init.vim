@@ -1,3 +1,14 @@
+lua << EOF
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+
+EOF
+
 source ~/.config/nvim/plugins.lua
 
 
@@ -38,12 +49,11 @@ set mouse=a
 
 let g:vim_markdown_folding_disabled = 1
 
-"set number
+set number
 set exrc " exec local .exrc to load project-specific configs
 
-" workaround to fix menu bug:
-" https://github.com/preservim/nerdtree/issues/1321
-let g:NERDTreeMinimalMenu=1
+" always disable sign column do avoid blinking
+set signcolumn=yes
 
 source ~/.config/nvim/lsp.lua
 source ~/.config/nvim/shortcuts.vim

@@ -16,7 +16,16 @@ require("lazy").setup({
 		'janko-m/vim-test',
 		'junegunn/gv.vim',
 		'morhetz/gruvbox',
+
 		'scrooloose/nerdtree',
+	        -- {
+	        -- 	'nvim-tree/nvim-tree.lua',
+	        -- dependencies = {
+	        -- 	'nvim-tree/nvim-web-devicons'
+	        -- },
+	        -- 	cmd = "NvimTreeFindFile"
+	        -- },
+
 		'tpope/vim-commentary',
 
 		-- buffers
@@ -40,6 +49,8 @@ require("lazy").setup({
 		'tpope/vim-endwise', --also ruby
 		'tbastos/vim-lua',
 		'plasticboy/vim-markdown',
+		--'tpope/vim-markdown',
+		'udalov/kotlin-vim',
 
 		-- LSP
 		'neovim/nvim-lspconfig',
