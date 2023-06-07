@@ -18,3 +18,6 @@ Ny NeoVIM configs
 
 [ ] https://github.com/hrsh7th/nvim-cmp
 [ ] https://github.com/olimorris/neotest-rspec
+[ ] Neovim Tree
+[ ] search selected text with vimgrep
+[ ] snippets

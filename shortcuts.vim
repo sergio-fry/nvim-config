@@ -6,6 +6,7 @@ nmap <Space>fb :Telescope buffers<CR>
 nmap <Space>ff :Telescope find_files<CR>
 nmap <Space>fs :Telescope live_grep<CR>
 nmap <Space>ft :NERDTreeFind<CR>
+nmap <Space>fT :NERDTreeClose<CR>
 nmap <Space>t :TestLast<CR>
 nmap <Space>tf :TestFile<CR>
 nmap <Space>tl :TestNearest<CR>
