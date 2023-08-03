@@ -46,6 +46,7 @@ set mouse=a
 
 
 " set keymap=russian-jcukenmac
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 
 let g:vim_markdown_folding_disabled = 1
 

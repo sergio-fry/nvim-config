@@ -51,15 +51,19 @@ require("lazy").setup({
 		'plasticboy/vim-markdown',
 		--'tpope/vim-markdown',
 		'udalov/kotlin-vim',
+		'jparise/vim-graphql',
 
 		-- LSP
 		'neovim/nvim-lspconfig',
-		'hrsh7th/nvim-cmp', -- Autocompletion plugin
-		'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+		--'hrsh7th/nvim-cmp', -- Autocompletion plugin
+		--'hrsh7th/cmp-nvim-lsp', -- LSP source for nvim-cmp
+		--'hrsh7th/cmp-buffer', 
 
 
 		'dcampos/nvim-snippy',
-		'dcampos/cmp-snippy', -- snippets engine
+		--'dcampos/cmp-snippy', -- snippets engine
 		'honza/vim-snippets', -- snippets collection
+
+		'junegunn/goyo.vim', -- zenmode
 	})
 

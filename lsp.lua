@@ -1,5 +1,5 @@
 -- Add additional capabilities supported by nvim-cmp
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
+--local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lspconfig = require('lspconfig')
 
@@ -8,10 +8,12 @@ local servers = { 'solargraph', 'kotlin_language_server' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     -- on_attach = my_custom_on_attach,
-    capabilities = capabilities,
+    --capabilities = capabilities,
   }
 end
 
+
+--[=====[
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
@@ -40,5 +42,8 @@ cmp.setup {
   }),
   sources = {
     { name = 'nvim_lsp' },
-  },
+  }, {
+    { name = 'buffer' },
+  }
 }
+--]=====]
