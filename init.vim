@@ -59,3 +59,8 @@ set signcolumn=yes
 source ~/.config/nvim/lsp.lua
 source ~/.config/nvim/shortcuts.vim
 source ~/.config/nvim/snippets.vim
+
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smartindent

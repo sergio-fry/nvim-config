@@ -13,18 +13,45 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 		'nvim-treesitter/nvim-treesitter',
+		{
+			"folke/neodev.nvim",
+			opts = {},
+			config = function() 
+				require("neodev").setup({
+						library = { plugins = { "neotest" }, types = true },
+					})
+			end
+		},
 		'janko-m/vim-test',
+
+		-- TODO: install https://github.com/antoinemadec/FixCursorHold.nvim
+		--       to fix neotest cursor
+		{
+			"nvim-neotest/neotest",
+			lazy = true,
+			dependencies = {
+				"olimorris/neotest-rspec",
+			},
+			config = function()
+				require("neotest").setup({
+						adapters = {
+							require("neotest-rspec")
+						},
+						
+					})
+			end
+		},
 		'junegunn/gv.vim',
 		'morhetz/gruvbox',
 
 		'scrooloose/nerdtree',
-	        -- {
-	        -- 	'nvim-tree/nvim-tree.lua',
-	        -- dependencies = {
-	        -- 	'nvim-tree/nvim-web-devicons'
-	        -- },
-	        -- 	cmd = "NvimTreeFindFile"
-	        -- },
+		-- {
+		-- 	'nvim-tree/nvim-tree.lua',
+		-- dependencies = {
+		-- 	'nvim-tree/nvim-web-devicons'
+		-- },
+		-- 	cmd = "NvimTreeFindFile"
+		-- },
 
 		'tpope/vim-commentary',
 
@@ -65,5 +92,19 @@ require("lazy").setup({
 		'honza/vim-snippets', -- snippets collection
 
 		'junegunn/goyo.vim', -- zenmode
+
+    {
+      "sontungexpt/url-open",
+      event = "VeryLazy",
+      cmd = "URLOpenUnderCursor",
+      open_app = "safari",
+      config = function()
+        local status_ok, url_open = pcall(require, "url-open")
+        if not status_ok then
+          return
+        end
+        url_open.setup ({})
+      end,
+    },
 	})
 
