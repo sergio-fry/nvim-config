@@ -22,25 +22,32 @@ require("lazy").setup({
 					})
 			end
 		},
-		'janko-m/vim-test',
 
-		-- TODO: install https://github.com/antoinemadec/FixCursorHold.nvim
-		--       to fix neotest cursor
-		{
-			"nvim-neotest/neotest",
-			lazy = true,
-			dependencies = {
-				"olimorris/neotest-rspec",
-			},
-			config = function()
-				require("neotest").setup({
-						adapters = {
-							require("neotest-rspec")
-						},
-						
-					})
-			end
-		},
+    { "folke/neodev.nvim", opts = {} },
+
+
+    {
+      "nvim-neotest/neotest",
+      -- lazy = true,
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-treesitter/nvim-treesitter",
+        "antoinemadec/FixCursorHold.nvim",
+        -- "olimorris/neotest-rspec",
+        "nvim-neotest/neotest-vim-test",
+        "janko-m/vim-test",
+      },
+      config = function()
+        require("neotest").setup({
+            adapters = {
+              --require("neotest-plenary"),
+              -- require("neotest-rspec"),
+              require("neotest-vim-test")({ ignore_filetypes = {} }),
+            },
+          })
+      end
+    },
+
 		'junegunn/gv.vim',
 		'morhetz/gruvbox',
 
@@ -64,7 +71,7 @@ require("lazy").setup({
 
 		-- Telescope
 		{
-			'nvim-telescope/telescope.nvim', tag = '0.1.1',
+			'nvim-telescope/telescope.nvim', tag = '0.1.4',
 			dependencies = {
 				'nvim-lua/plenary.nvim',
 				'BurntSushi/ripgrep'
@@ -103,8 +110,17 @@ require("lazy").setup({
         if not status_ok then
           return
         end
-        url_open.setup ({})
+        url_open.setup({
+            highlight_url = {
+              cursor_move = {
+                enabled = false,
+              }
+            }
+
+          })
       end,
     },
 	})
+
+
 
