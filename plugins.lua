@@ -26,27 +26,29 @@ require("lazy").setup({
     { "folke/neodev.nvim", opts = {} },
 
 
-    {
-      "nvim-neotest/neotest",
-      -- lazy = true,
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-        "nvim-treesitter/nvim-treesitter",
-        "antoinemadec/FixCursorHold.nvim",
-        -- "olimorris/neotest-rspec",
-        "nvim-neotest/neotest-vim-test",
-        "janko-m/vim-test",
-      },
-      config = function()
-        require("neotest").setup({
-            adapters = {
-              --require("neotest-plenary"),
-              -- require("neotest-rspec"),
-              require("neotest-vim-test")({ ignore_filetypes = {} }),
-            },
-          })
-      end
-    },
+    "janko-m/vim-test",
+
+   --{
+   --  "nvim-neotest/neotest",
+   --  -- lazy = true,
+   --  dependencies = {
+   --    "nvim-lua/plenary.nvim",
+   --    "nvim-treesitter/nvim-treesitter",
+   --    "antoinemadec/FixCursorHold.nvim",
+   --    -- "olimorris/neotest-rspec",
+   --    "nvim-neotest/neotest-vim-test",
+   --    "janko-m/vim-test",
+   --  },
+   --  config = function()
+   --    require("neotest").setup({
+   --        adapters = {
+   --          --require("neotest-plenary"),
+   --          -- require("neotest-rspec"),
+   --          require("neotest-vim-test")({ ignore_filetypes = {} }),
+   --        },
+   --      })
+   --  end
+   --},
 
 		'junegunn/gv.vim',
 		'morhetz/gruvbox',
@@ -66,7 +68,12 @@ require("lazy").setup({
 		'jlanzarotta/bufexplorer',
 
 		-- Git
-		'tpope/vim-fugitive',
+    {
+      'tpope/vim-fugitive',
+      dependencies = {
+        'tpope/vim-rhubarb',
+      },
+    },
 		--'Morozzzko/git_browse.nvim',
 
 		-- Telescope
@@ -120,6 +127,10 @@ require("lazy").setup({
           })
       end,
     },
+
+		--'mrxk/vim-jira', -- jira text highlight
+    -- 'n0v1c3/vira', 
+
 	})
 
 
