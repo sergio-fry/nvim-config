@@ -60,6 +60,13 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+  -- disable netrw at the very start of your init.lua
+  vim.g.loaded_netrw = 1
+  vim.g.loaded_netrwPlugin = 1
+
+  -- set termguicolors to enable highlight groups
+  vim.opt.termguicolors = true
+
 -- [[ Configure plugins ]]
 -- NOTE: Here is where you install your plugins.
 --  You can configure plugins using the `config` key.
@@ -267,6 +274,13 @@ require('lazy').setup({
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
   -- { import = 'custom.plugins' },
+
+  {
+    'nvim-tree/nvim-tree.lua',
+    config = function()
+      require("nvim-tree").setup()
+    end,
+  },
 }, {})
 
 -- [[ Setting options ]]
@@ -285,7 +299,7 @@ vim.o.mouse = 'a'
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = 'unnamedplus'
+-- vim.o.clipboard = 'unnamedplus'
 
 -- Enable break indent
 vim.o.breakindent = true

@@ -1,7 +1,7 @@
 # TODO
 
-* [ ] files tree browser
-* [ ] autowrite buff on focus lost
+* [x] files tree browser - Lexplore!
+* [x] autowrite buff on focus lost
 
 
 # kickstart.nvim
