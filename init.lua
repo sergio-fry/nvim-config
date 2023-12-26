@@ -257,8 +257,17 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
+      'tadmccorkle/markdown.nvim',
     },
     build = ':TSUpdate',
+    config = function()
+    require("nvim-treesitter.configs").setup({
+      ensure_installed = { "markdown", "markdown_inline" },
+      markdown = {
+        enable = true,
+      },
+    })
+  end,
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
