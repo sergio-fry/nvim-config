@@ -362,3 +362,7 @@ end
 -- before setting up the servers.
 require('mason').setup()
 require('mason-lspconfig').setup()
+
+vim.api.nvim_command('let g:netrw_liststyle=3')
+vim.api.nvim_command('let g:netrw_winsize=30')
+
