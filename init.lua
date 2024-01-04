@@ -240,6 +240,22 @@ require('lazy').setup({
   --     require("nvim-tree").setup()
   --   end,
   -- },
+  { 
+	  "nvim-neotest/neotest",
+	  dependencies = {
+		  "nvim-lua/plenary.nvim",
+		  "antoinemadec/FixCursorHold.nvim",
+		  "nvim-treesitter/nvim-treesitter",
+		  "olimorris/neotest-rspec",
+	  },
+	  config = function()
+		  require("neotest").setup({
+			  adapters = {
+				  require("neotest-rspec")
+			  },
+		  })
+	  end
+  }
 }, {})
 
 
@@ -336,6 +352,18 @@ vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by 
 vim.keymap.set('n', '<leader>sd', require('telescope.builtin').diagnostics, { desc = '[S]earch [D]iagnostics' })
 vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = '[S]earch [R]esume' })
 
+vim.keymap.set('n', '<leader>tf', function()
+	require("neotest").run.run(vim.fn.expand("%"))
+end, { desc = '[T]est [F]ile' })
+
+vim.keymap.set('n', '<leader>tl', function()
+	require("neotest").run.run()
+end, { desc = '[T]est [L]ine' })
+vim.keymap.set('n', '<leader>t', function()
+	require("neotest").run.run_last()
+end, { desc = '[T]est last' })
+
+vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
