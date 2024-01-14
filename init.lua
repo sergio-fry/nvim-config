@@ -396,3 +396,6 @@ vim.api.nvim_command('let g:netrw_winsize=30')
 
 
 vim.api.nvim_command('set completeopt-=noselect')
+
+-- Keep signcolumn on by default
+vim.wo.signcolumn = 'yes'
