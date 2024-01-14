@@ -394,3 +394,5 @@ require('mason-lspconfig').setup()
 vim.api.nvim_command('let g:netrw_liststyle=3')
 vim.api.nvim_command('let g:netrw_winsize=30')
 
+
+vim.api.nvim_command('set completeopt-=noselect')
