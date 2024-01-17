@@ -42,6 +42,9 @@ require('lazy').setup({
   -- Detect tabstop and shiftwidth automatically
   -- 'tpope/vim-sleuth',
 
+  -- buffer explorer
+  'jlanzarotta/bufexplorer',
+
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
   {
@@ -240,6 +243,7 @@ require('lazy').setup({
   --     require("nvim-tree").setup()
   --   end,
   -- },
+  'preservim/nerdtree',
   { 
 	  "nvim-neotest/neotest",
 	  dependencies = {
@@ -326,7 +330,11 @@ vim.api.nvim_create_user_command('LiveGrepGitRoot', live_grep_git_root, {})
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>?', require('telescope.builtin').oldfiles, { desc = '[?] Find recently opened files' })
-vim.keymap.set('n', '<leader><space>', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader>b', require('telescope.builtin').buffers, { desc = '[ ] Find existing buffers' })
+vim.keymap.set('n', '<leader><space>', ':BufExplorer<cr>', { desc = '[ ] Buf Explorer' })
+
+
+
 vim.keymap.set('n', '<leader>/', function()
   -- You can pass additional configuration to telescope to change theme, layout, etc.
   require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
