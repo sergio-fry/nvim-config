@@ -383,6 +383,9 @@ end, { desc = '[T]est last' })
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
 
 vim.keymap.set('n', '<leader>zg', ':Telekasten follow_link<cr>', { desc = '[Z]ettelkasten [G]o to note' })
+vim.keymap.set('n', '<leader>zl', ':Telekasten insert_link<cr>', { desc = '[Z]ettelkasten insert [L]ink' })
+vim.keymap.set('n', '<leader>zt', ':Telekasten goto_today<cr>', { desc = '[Z]ettelkasten goto [T]oday' })
+vim.keymap.set('n', '<leader>zn', ':Telekasten new_note<cr>', { desc = '[Z]ettelkasten [N]ew' })
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
@@ -418,3 +421,11 @@ vim.api.nvim_command('set completeopt-=noselect')
 
 -- Keep signcolumn on by default
 vim.wo.signcolumn = 'yes'
+
+-- Russian
+vim.api.nvim_command('set keymap=russian-jcukenmac')
+-- vim.api.nvim_command('set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz')
+
+-- english by default
+vim.api.nvim_command('set iminsert=0')
+vim.api.nvim_command('set imsearch=0')
