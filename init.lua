@@ -34,6 +34,15 @@ vim.opt.rtp:prepend(lazypath)
 --    as they will be available in your neovim runtime.
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
+  {
+	  'renerocksai/telekasten.nvim',
+	  dependencies = {'nvim-telescope/telescope.nvim'},
+	  config = function()
+		  require('telekasten').setup({
+			  home = vim.fn.expand("/Users/sergei/Nextcloud/Notes"), -- Put the name of your notes directory here
+		  })
+	  end,
+  },
 
   -- Git related plugins
   'tpope/vim-fugitive',
@@ -372,6 +381,8 @@ vim.keymap.set('n', '<leader>t', function()
 end, { desc = '[T]est last' })
 
 vim.keymap.set('n', '<leader>sG', ':LiveGrepGitRoot<cr>', { desc = '[S]earch by [G]rep on Git Root' })
+
+vim.keymap.set('n', '<leader>zg', ':Telekasten follow_link<cr>', { desc = '[Z]ettelkasten [G]o to note' })
 
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
