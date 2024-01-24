@@ -268,7 +268,13 @@ require('lazy').setup({
 			  },
 		  })
 	  end
-  }
+  },
+  {
+	  'preservim/vim-markdown',
+	  dependencies = {
+		  'godlygeek/tabular',
+	  }
+  },
 }, {})
 
 
