@@ -1,23 +1,4 @@
-# nvim-config
-Ny NeoVIM configs
+# 💤 LazyVim
 
-## Features
-
-* LSP Ruby
-* snippets
-* local project config
-* split config into parts
-* telescope
-* search
-
-## Installation
-
-* `brew install uptech/oss/alt`
-
-## TODO
-
-[ ] https://github.com/hrsh7th/nvim-cmp
-[ ] https://github.com/olimorris/neotest-rspec
-[ ] Neovim Tree
-[ ] search selected text with vimgrep
-[ ] snippets
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
