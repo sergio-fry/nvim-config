@@ -393,6 +393,8 @@ vim.keymap.set('n', '<leader>zl', ':Telekasten insert_link<cr>', { desc = '[Z]et
 vim.keymap.set('n', '<leader>zt', ':Telekasten goto_today<cr>', { desc = '[Z]ettelkasten goto [T]oday' })
 vim.keymap.set('n', '<leader>zn', ':Telekasten new_note<cr>', { desc = '[Z]ettelkasten [N]ew' })
 
+vim.keymap.set('n', '<leader>ft', ':NERDTreeFind<cr>', { desc = '[F]ile [T]ree' })
+
 -- [[ Configure LSP ]]
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -435,3 +437,10 @@ vim.api.nvim_command('set keymap=russian-jcukenmac')
 -- english by default
 vim.api.nvim_command('set iminsert=0')
 vim.api.nvim_command('set imsearch=0')
+
+vim.api.nvim_command('let g:vim_markdown_folding_disabled = 1')
+vim.api.nvim_command('let g:vim_markdown_new_list_item_indent = 2')
+vim.api.nvim_command('let g:vim_markdown_borderless_table = 1')
+
+
+vim.api.nvim_command('set spell spelllang=ru,en_us')
